@@ -1,0 +1,34 @@
+{
+  "name": "knockout-ellipsis-tooltip",
+  "version": "1.0.0",
+  "description": "Knockout binding for showing tooltip only when the element's text has ellipsis",
+  "main": "ellipsisTooltip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohel-ahmed-ansari/knockout-ellipsis-tooltip.git"
+  },
+  "keywords": [
+    "knockout",
+    "ellipsis",
+    "tooltip",
+    "ko",
+    "jQuery",
+    "tool",
+    "tip",
+    "tool-tip"
+  ],
+  "author": "Sohel Ahmed Ansari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sohel-ahmed-ansari/knockout-ellipsis-tooltip/issues"
+  },
+  "homepage": "https://github.com/sohel-ahmed-ansari/knockout-ellipsis-tooltip#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "mario": "^1.7.2"
+  }
+}

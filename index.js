@@ -1,9 +1,35 @@
 //binding for showing tooltip only when the element text has ellipsis
-define([
-    'knockout',
-    'jquery',
-    'mario'
-], function (ko, $, mario) {
+(function( factory ) {
+	"use strict";
+
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'knockout', 'mario'], function ( $ ) {
+			return factory( $, ko, mario);
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function () {
+            var jq = $;
+            if(!jq) {
+                jq = require('jquery');
+            }
+            var ko = require('knockout'),
+                mario = require('mario');
+
+			return factory( jq, ko, mario );
+		};
+	}
+	else {
+        // Browser
+        if(!ko || !mario || !jQuery) {
+            throw new Error('Dependencies not found. [jQuery, ko, mario] required as global variables if not using AMD');
+        }
+		factory( jQuery, ko, mario);
+	}
+}
+(function ($, ko, mario) {
     ko.bindingHandlers.ellipsisTooltip = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             var text = allBindingsAccessor().text,
@@ -79,4 +105,5 @@ define([
 
         return cssText;
     }
-});
+}));
+
