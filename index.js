@@ -4,7 +4,7 @@
 
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['jquery', 'knockout', 'mario'], function ( $ ) {
+		define( ['jquery', 'knockout', 'mario'], function ( $, ko, mario ) {
 			return factory( $, ko, mario);
 		} );
 	}
