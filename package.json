@@ -1,6 +1,6 @@
 {
   "name": "knockout-ellipsis-tooltip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Knockout binding for showing tooltip only when the element's text has ellipsis",
   "main": "ellipsisTooltip.js",
   "scripts": {
